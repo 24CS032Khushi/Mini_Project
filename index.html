@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Vegetarian Global Kitchen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>FlavorFinds</h1>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search by name (e.g., 'Paneer')...">
+            <button id="search-btn">Search</button>
+        </div>
+    </header>
+
+    <nav class="category-nav">
+        <button class="nav-btn active-filter" data-filter-type="all" data-filter-value="all">⭐ All Recipes</button>
+        <button class="nav-btn" data-filter-type="cuisine" data-filter-value="Indian">🇮🇳 Indian</button>
+        <button class="nav-btn" data-filter-type="region" data-filter-value="Indo-Chinese">🥡 Indo-Chinese</button>
+        <button class="nav-btn" data-filter-type="type" data-filter-value="Dessert">🍰 Dessert</button>
+        <button class="nav-btn" data-filter-type="type" data-filter-value="Drink">🥤 Drinks</button>
+        <button class="nav-btn" data-filter-type="tag" data-filter-value="spicy">🌶️ Spicy Food</button>
+    </nav>
+
+    <div id="subcategory-filter" class="filter-controls" style="display: none;">
+        <label for="region-select">Indian Region Filter:</label>
+        <select id="region-select">
+            <option value="all-indian">All Indian Food</option>
+            <option value="North Indian">North Indian</option>
+            <option value="South Indian">South Indian</option>
+        </select>
+    </div>
+
+    <main>
+        <section class="recipe-gallery" id="recipe-gallery">
+            <p class="loading-message">Loading delicious recipes...</p>
+        </section>
+    </main>
+
+    <div class="modal" id="recipe-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Advanced Vegetarian Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
